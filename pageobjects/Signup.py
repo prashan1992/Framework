@@ -1,6 +1,5 @@
-from selenium import webdriver
 
-class signup:
+class Signup:
     button_click_signup_xpath="//body/div[3]/div[2]/div[1]/div[1]/div[3]/div[1]/a[1]/button[1]"
     textbox_firstname_id="first_name"
     textbox_middlename_id="middle_name"

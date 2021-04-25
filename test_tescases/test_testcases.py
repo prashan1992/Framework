@@ -1,16 +1,19 @@
 import pytest
 from selenium import webdriver
-from pageobjects.Signup import signup
+from pageobjects.Signup import Signup
+from utilities.BaseClass import BaseClass
 
 
-class Test_001_Signup:
+class Test_001_Signup(BaseClass):
+
     def test_homepage(self):
-        self.signup.click_signup()
-        self.signup.enter_first_name("Prashant")
-        self.signup.enter_middle_name("Kumar")
-        self.signup.enter_lastname("Dwivedi")
-        self.signup.enter_email_id("prashantkr.dwivedi@gmail.com")
-        self.signup.enter_dob("07-09-1992")
-        self.signup.enter_mobile_no("9451683489")
-        self.signup.enter_pass_word("rudra@1234")
-        self.signup.submit()
+        signup = Signup(self.driver)
+        signup.click_signup()
+        signup.enter_first_name("Prashant")
+        signup.enter_middle_name("Kumar")
+        signup.enter_lastname("Dwivedi")
+        signup.enter_email_id("prashantkr.dwivedi@gmail.com")
+        signup.enter_dob("07-09-1992")
+        signup.enter_mobile_no("9451683489")
+        signup.enter_pass_word("rudra@1234")
+        signup.submit()
