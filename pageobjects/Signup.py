@@ -1,6 +1,7 @@
 from selenium import webdriver
 
-class Signup:
+class signup:
+    button_click_signup_xpath="//body/div[3]/div[2]/div[1]/div[1]/div[3]/div[1]/a[1]/button[1]"
     textbox_firstname_id="first_name"
     textbox_middlename_id="middle_name"
     textbox_lastname_id="last_name"
@@ -12,6 +13,9 @@ class Signup:
 
     def __init__(self,driver):
         self.driver=driver
+
+    def click_signup(self):
+        self.driver.find_element_by_xpath(self.button_click_signup_xpath).click()
 
     def enter_first_name(self,firstname):
         self.driver.find_element_by_id(self.textbox_firstname_id).send_keys(firstname)
