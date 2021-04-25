@@ -17,4 +17,4 @@ class Test_001_Signup(BaseClass):
         signup.enter_mobile_no("9451683489")
         signup.enter_pass_word("rudra@1234")
         signup.submit()
-    def test_anand(self):
+    
